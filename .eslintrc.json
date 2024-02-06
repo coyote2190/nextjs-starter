@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "next",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["sort-destructure-keys", "typescript-sort-keys"],
+  "rules": {
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx", ".jsx"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/extensions": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "implicit-arrow-linebreak": "off",
+    "arrow-body-style": "off",
+    "import/no-named-as-default": 0,
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-newline": "off",
+    "react/function-component-definition": "off",
+    "no-param-reassign": "off",
+    "no-promise-executor-return": "off",
+    "no-unused-expressions": "off"
+  }
+}
