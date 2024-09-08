@@ -2,20 +2,13 @@
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
-  transpilePackages: ['@mui/material', '@mui/system'],
   webpack: (config) => {
     config.resolve.alias = {
-      ...config.resolve.alias,
-      '@mui/styled-engine': '@mui/styled-engine-sc'
+      ...config.resolve.alias
     };
     return config;
   },
-  compiler: {
-    styledComponents: true
-  },
-  experimental: {
-    forceSwcTransforms: true
-  },
+  swcMinify: true,
   images: {
     remotePatterns: [
       {

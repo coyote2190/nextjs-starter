@@ -1,8 +1,22 @@
+import { Breakpoints } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import colors, { Colors } from './colors';
+import fonts, { Fonts } from './fonts';
+import breakpoints from './breakpoints';
+
+export interface Theme {
+  breakpoints: Breakpoints;
+  colors: Colors;
+  fonts: Fonts;
+}
+
 const theme = {
-  colors: {
-    colorName1: '#aabbcc',
-    colorName2: 'hsla(50, 60%, 70%, 0.5)'
-  }
+  colors,
+  breakpoints: {
+    ...createTheme({}).breakpoints,
+    values: breakpoints
+  },
+  fonts
 };
 
 export default theme;

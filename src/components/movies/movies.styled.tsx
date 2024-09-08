@@ -1,8 +1,8 @@
 'use client';
 
-import { styled } from 'styled-components';
+import { styled } from '@mui/system';
 
-export const StyledMoviesContainer = styled.section`
+export const StyledMoviesContainer = styled('section')`
   display: flex;
   gap: 15px;
   flex-wrap: wrap;

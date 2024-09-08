@@ -1,10 +1,11 @@
 'use client';
 
-import muiTheme from '@/styles/muiTheme';
-import { CssBaseline, ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import muiTheme from '../styles/muiTheme';
 
-export const MuiRegistry = ({ children }: { children: React.ReactNode }) => (
+export const StyledComponentsRegistryMui = ({ children }: { children: React.ReactNode }) => (
   // <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>
   <ThemeProvider theme={muiTheme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -14,4 +15,4 @@ export const MuiRegistry = ({ children }: { children: React.ReactNode }) => (
   // </NextAppDirEmotionCacheProvider>
 );
 
-export default MuiRegistry;
+export default StyledComponentsRegistryMui;

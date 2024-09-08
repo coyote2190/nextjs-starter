@@ -1,10 +1,10 @@
 'use client';
 
-import useUpdateListMovies from '@/store/movies/hooks';
-import { Movie } from '@/store/movies/types';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import axios from 'axios';
 import { useState } from 'react';
+import { Movie } from '@/store/movies/types';
+import useUpdateListMovies from '@/store/movies/hooks';
 import useGetListMovies from '@/store/movies/selectors';
 import StyledMoviesContainer from './movies.styled';
 

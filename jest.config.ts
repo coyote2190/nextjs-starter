@@ -19,7 +19,6 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/src/__tests__/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
-    '^@mui/styled-engine$': '<rootDir>/node_modules/@mui/styled-engine-sc',
     '^@components(.*)$': '<rootDir>/src/components$1',
     '^@/(.*)$': '<rootDir>/src/$1'
   },

@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+'use client';
 
-const StyledCopyright = styled.section`
+import { styled } from '@mui/system';
+
+const StyledCopyright = styled('section')`
   margin-top: 30px;
 `;
 

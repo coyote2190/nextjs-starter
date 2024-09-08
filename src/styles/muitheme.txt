@@ -1,14 +1,30 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, alpha, getContrastRatio } from '@mui/material/styles';
 import colors from '@/styles/colors';
+import { satoshi } from '@/styles/fonts';
+
+const violetBase = '#7F00FF';
+const violetMain = alpha(violetBase, 0.7);
 
 const muiTheme = createTheme({
   palette: {
     primary: {
       main: colors.primary
+    },
+    error: {
+      main: colors.red
+    },
+    violet: {
+      main: violetMain,
+      light: alpha(violetBase, 0.5),
+      dark: alpha(violetBase, 0.9),
+      contrastText: getContrastRatio(violetMain, '#fff') > 4.5 ? '#fff' : '#111'
+    },
+    greenFluo: {
+      main: colors.greenFluo
     }
   },
   typography: {
-    // fontFamily: satoshi.style.fontFamily,
+    fontFamily: satoshi.style.fontFamily,
     allVariants: {
       color: '#10293E'
     }
@@ -29,11 +45,7 @@ const muiTheme = createTheme({
         {
           props: { variant: 'fluo' },
           style: {
-            background: colors.greenFluo,
-            '&:hover': {
-              backgroundColor: '#0e293e',
-              color: '#00fcc6'
-            }
+            background: colors.greenFluo
           }
         }
       ]
@@ -96,8 +108,7 @@ const muiTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          background: '#fff',
-          borderRadius: 30
+          // background: '#fff'
         },
         notchedOutline: {
           borderRadius: 30,
