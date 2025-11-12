@@ -26,7 +26,7 @@ export default function Home() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" variant="contained">
+          <Button size="small" variant="fluo">
             Learn More
           </Button>
         </CardActions>

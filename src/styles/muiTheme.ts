@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import colors from '@/styles/colors';
+import { lato } from './fonts';
 
 const muiTheme = createTheme({
   palette: {
@@ -8,7 +9,7 @@ const muiTheme = createTheme({
     }
   },
   typography: {
-    // fontFamily: satoshi.style.fontFamily,
+    fontFamily: lato.style.fontFamily,
     allVariants: {
       color: '#10293E'
     }
@@ -19,7 +20,6 @@ const muiTheme = createTheme({
         root: {
           height: '40px',
           lineHeight: 0,
-          // padding: '0 70px',
           fontSize: '15px',
           boxShadow: 'none',
           borderRadius: '26px'
@@ -102,7 +102,6 @@ const muiTheme = createTheme({
         notchedOutline: {
           borderRadius: 30,
           borderColor: 'transparent'
-          // background: '#fff'
         }
       }
     },
